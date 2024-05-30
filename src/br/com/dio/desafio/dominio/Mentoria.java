@@ -5,6 +5,8 @@ import java.time.LocalDate;
 public class Mentoria extends Conteudo{
 
     private LocalDate data;
+    private String mentor;
+
 
     @Override
     public double calcularXp() {
@@ -21,6 +23,13 @@ public class Mentoria extends Conteudo{
     public void setData(LocalDate data) {
         this.data = data;
     }
+    public String getMentor() {
+		return mentor;
+	}
+
+	public void setMentor(String mentor) {
+		this.mentor = mentor;
+	}
 
     @Override
     public String toString() {
@@ -30,4 +39,13 @@ public class Mentoria extends Conteudo{
                 ", data=" + data +
                 '}';
     }
+    @Override
+	public Map<String, Object> getInfo() {
+		Map<String, Object> info = new HashMap<>();
+		info.put("descricao", getDescricao());
+		info.put("data", data);
+		info.put("mentor", mentor);
+
+		return info;
+	}
 }
