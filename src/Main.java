@@ -58,6 +58,16 @@ public class Main {
         System.out.println("Conteúdos Concluidos João:" + devJoao.getConteudosConcluidos());
         System.out.println("XP:" + devJoao.calcularTotalXp());
 
+
+
+        // Imprimindo informações de um Curso
+		System.out.println("\n**Informações do Curso:**");
+		System.out.println(curso1.getInfo());
+
+		// Imprimindo informações de uma Mentoria
+		System.out.println("\n**Informações da Mentoria:**");
+		System.out.println(mentoria.getInfo());
+
     }
 
 }
